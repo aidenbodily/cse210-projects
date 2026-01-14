@@ -1,9 +1,23 @@
 using System;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
-class Program
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         Console.WriteLine("Hello Sandbox World!");
+//     }
+// }
+
+namespace Sandbox
 {
-    static void Main(string[] args)
+    public class Program
     {
-        Console.WriteLine("Hello Sandbox World!");
+        public static void Main()
+        {
+            Console.Write("What is your favorite color? ");
+            string color = Console.ReadLine();
+        }
     }
 }
