@@ -9,9 +9,8 @@ class Program
         // make a list
         // have the user give inputs as long as its not 0
         // calculate the things it wants
-        Console.WriteLine("Hello Prep4 World!");
-
         // make a list
+        
         List<int> numbers = new List<int>();
         // have the user give inputs until "0"
         int inputNumber = -1;
