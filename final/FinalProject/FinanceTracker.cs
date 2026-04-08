@@ -41,7 +41,21 @@ public class FinanceTracker
 
     public string GenerateSpendingSummary()
     {
-        // todo: loop through everything and build a nice summary string
-        return "Spending summary not yet implemented.";
+        string summary = "";
+
+        summary += "--- Accounts ---\n";
+        foreach (Account a in _accounts)
+        {
+            summary += a.GetSummary() + "\n";
+        }
+        summary += "Total: $" + GetTotalBalance() + "\n";
+
+        summary += "\n--- Budgets ---\n";
+        foreach (Budget b in _budgets)
+        {
+            summary += b.GetBudgetSummary() + "\n";
+        }
+
+        return summary;
     }
 }

@@ -15,7 +15,8 @@ public class SavingsAccount : Account
 
     public void ApplyInterest()
     {
-        // todo: add the math for applying interest to the balance
+        double interest = GetBalance() * _interestRate;
+        Deposit(interest);
     }
 
     public override string GetSummary()
@@ -25,7 +26,6 @@ public class SavingsAccount : Account
 
     public override double CalculateBalance()
     {
-        // todo: figure out how to factor in interest stuff here
-        return 0;
+        return GetBalance();
     }
 }

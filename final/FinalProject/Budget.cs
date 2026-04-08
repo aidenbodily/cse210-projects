@@ -38,7 +38,11 @@ public class Budget
 
     public string GetBudgetSummary()
     {
-        // todo: make this show the spending vs the limit and if its over
-        return $"{_category.GetName()}: (summary not yet implemented)";
+        string status = "within budget";
+        if (IsOverBudget())
+        {
+            status = "OVER BUDGET";
+        }
+        return _category.GetName() + ": $" + _spent + " / $" + _limit + " - " + status;
     }
 }

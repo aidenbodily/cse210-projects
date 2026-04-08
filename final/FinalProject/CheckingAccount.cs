@@ -20,7 +20,6 @@ public class CheckingAccount : Account
 
     public override double CalculateBalance()
     {
-        // todo: need to do something with the overdraft limit here
-        return 0;
+        return GetBalance() + _overdraftLimit;
     }
 }

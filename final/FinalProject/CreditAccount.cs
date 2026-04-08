@@ -20,7 +20,6 @@ public class CreditAccount : Account
 
     public override double CalculateBalance()
     {
-        // todo: make this work with the credit limit somehow
-        return 0;
+        return _creditLimit + GetBalance();
     }
 }
